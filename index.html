@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Timerru</title>
+  </head>
+
+  <body>
+    <!-- TIMER CALCS -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6 pl-0">
+              <div class="card text-center bg-success text-white mb-3">
+                <div class="card-header"><h3 class="display-4">Norm</h3></div>
+                <div class="card-body">
+                  <span class="display-3 timer">00:00</span>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-outline-light btn-lg btn-block">
+                    Set
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 pr-0">
+              <div class="card text-center bg-danger text-white mb-3">
+                <div class="card-header"><h3 class="display-4">Debt</h3></div>
+                <div class="card-body ">
+                  <span class="display-3 timer">00:00</span>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-outline-light btn-lg btn-block">
+                    Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAIN TIMER -->
+          <div class="row">
+            <div class="jumbotron jumbotron-fluid w-100 text-center">
+              <div class="display-1">00:00</div>
+            </div>
+          </div>
+
+          <!-- START BUTTON -->
+          <button class="btn btn-outline-info btn-block btn-lg">Start</button>
+        </div>
+
+        <!-- USER PANEL -->
+        <div class="col-md-4 align-self-center">
+          <div class="card text-center bg-primary text-white mb-3">
+            <div class="card-header"><h3 class="display-4">Profile</h3></div>
+            <div class="card-body">
+              <h4 class="display-4"><i class="fas fa-user"></i></h4>
+            </div>
+            <div class="card-footer">
+              <button
+                class="btn btn-outline-light btn-lg btn-block"
+                data-toggle="modal"
+                data-target="#signIn"
+              >
+                Sign In
+              </button>
+              <button
+                class="btn btn-outline-light btn-lg btn-block"
+                data-toggle="modal"
+                data-target="#signUp"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODALS -->
+    <!-- Sign In -->
+    <div id="signIn" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Account Sign In</h3>
+          </div>
+          <div class="modal-body">
+            <form action="index.html" method="POST" target="_blank" id="form1">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                  id="username"
+                  name="username"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="confpassword">Confirm Password</label>
+                <input
+                  id="confpassword"
+                  name="confpassword"
+                  type="password"
+                  class="form-control"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <input
+              form="form1"
+              type="submit"
+              value="Submit"
+              class="btn btn-primary btn-block btn-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up -->
+    <div id="signUp" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Account Sign Up</h3>
+          </div>
+          <div class="modal-body">
+            <form action="index.html" method="POST" target="_blank" id="form1">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                  id="username"
+                  name="username"
+                  type="text"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="confpassword">Confirm Password</label>
+                <input
+                  id="confpassword"
+                  name="confpassword"
+                  type="password"
+                  class="form-control"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <input
+              form="form1"
+              type="submit"
+              value="Submit"
+              class="btn btn-primary btn-block btn-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOTSTRAP REQUIRED SCRIPTS -->
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Dynamic Year
+      $("#year").text(new Date().getFullYear());
+    </script>
+  </body>
+</html>
